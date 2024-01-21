@@ -1,0 +1,42 @@
+
+> source("/home/akash/Downloads/R_Assignment_Week3.R")
+> m <- matrix(c(2, 5, 1, 7, 3, 8, 6, 4, 9), nrow = 3, ncol = 3)
+> m1 <- makeCacheMatrix(m)
+> result <- cacheSolve(m1)
+> cat("Result of cacheSolve:\n")
+Result of cacheSolve:
+> print(result)
+            [,1]  [,2]       [,3]
+[1,]  0.06666667  0.20 -0.1333333
+[2,]  0.54666667 -0.16 -0.2933333
+[3,] -0.49333333  0.12  0.3866667
+> cached_inverse <- m1$getinv()
+> cat("Cached Inverse Matrix:\n")
+Cached Inverse Matrix:
+> print(cached_inverse)
+            [,1]  [,2]       [,3]
+[1,]  0.06666667  0.20 -0.1333333
+[2,]  0.54666667 -0.16 -0.2933333
+[3,] -0.49333333  0.12  0.3866667
+> 
+> 
+> 
+> mm <- matrix(c(4, 1, 5, 2, 6, 3, 7, 8, 9), nrow = 3, ncol = 3)
+> m2 <- makeCacheMatrix(mm)
+> result2 <- cacheSolve(m2)
+> cat("Result of cacheSolve:\n")
+Result of cacheSolve:
+> print(result2)
+          [,1]       [,2]      [,3]
+[1,] -4.285714 -0.4285714  3.714286
+[2,] -4.428571 -0.1428571  3.571429
+[3,]  3.857143  0.2857143 -3.142857
+> cached_inverse2 <- m2$getinv()
+> cat("Cached Inverse Matrix:\n")
+Cached Inverse Matrix:
+> print(cached_inverse2)
+          [,1]       [,2]      [,3]
+[1,] -4.285714 -0.4285714  3.714286
+[2,] -4.428571 -0.1428571  3.571429
+[3,]  3.857143  0.2857143 -3.142857
+> 
